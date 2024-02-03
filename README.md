@@ -82,6 +82,9 @@
     - `git log`
 - Make an commit without a commit message or blank commit message:
     - `git commit --allow-empty-message --no-edit`
+- To create an empty Git commit with a specified commit message:
+    - `git commit --allow-empty -m "Commit Message`
+    -  It's useful when we want to make a commit that doesn't introduce any changes but serves a specific purpose, such as triggering a CI/CD pipeline or marking a milestone.
 
 #### Git Commit without Stage:
 
@@ -132,6 +135,57 @@
 - Push Changes (if necessary):
     - After a successful merge, we may need to push the changes to the remote repository to make them available to others
     - `git push origin main`
+
+### Push Local Repository to GitHub
+
+- First we need to create a Repository on GitHub.
+- As we already set up a local Git repo, we are going to push that to GitHub Repository.
+- We need to get https link of the GitHub Repository from GitHub.
+- `git remote add origin URL` specifies that we are adding a remote repository, with the specified `URL`, as an `origin` to our local Git repo.
+    - `git remote add origin https://github.com/im-Rajat/Git.git`
+- We need push our main branch to the origin url, and set it as the default remote branch:
+    - `git push --set-upstream origin main`
+    - `--set-upstream` is typically done when we have created a new branch locally and want to push it to the remote repository for the first time.
+- Since we are first time connecting to GitHub, we will get some kind of notification to authenticate.
+- After push is successful, we can check GitHub and see that the repository has been updated.
+
+
+### Git Pull from GitHub
+
+- Use `pull` to update our local Git:
+- To pull changes from a GitHub repository to your local repository, you can use the `git pull` command.
+- The `git pull` command fetches changes from a remote repository (such as GitHub) and merges them into your current working branch.
+- `git pull origin main` - If we are on the main branch
+- `git pull` - If our local branch is tracking the remote branch, we can use a simpler form without specifying the remote or branch:
+- `pull` is a combination of 2 different commands:
+    - `fetch` & `merge`
+- `fetch` gets all the change history of a tracked branch/repo.
+    - `git fetch`
+- After running `git fetch` we need to run `git merge` to merge those fetched changes
+    - `git merge origin/main`
+    - `merge` combines the current branch, with a specified branch.
+- `git pull` combines the `git fetch` and `git merge` commands. It fetches changes from the remote repository and automatically merges them into the current branch.
+- Use `git fetch` if:
+    - We want to see what changes are on the remote branch before merging.
+    - We want to fetch changes without automatically merging them into your working branch.
+- Use `git pull` if:
+    - We want to fetch changes and automatically merge them into your working branch.
+    - We are confident that automatic merging will not lead to conflicts.
+
+### Git Push to GitHub
+
+- To push changes from your local Git repository to a repository on GitHub, you can use the `git push` command. 
+- Stage your changes:
+    - `git add .` - will stage all files
+- Commit your changes:
+    - `git commit -m "Your commit message here"`
+- Push Changes to GitHub:
+    - `git push origin main`
+    - If this is first time we are pushing to the remote repository or if we haven't saved your GitHub credentials, we may be prompted to enter your GitHub username and password or a personal access token.
+    - `git push -f origin main` -  to force push changes, the `-f` flag stands for "force" and it overrides the default behavior of Git, allowing us to overwrite the remote branch with your local changes. Should not use it.
+    - `origin` - This is the default name of the remote repository. It represents the remote repository on GitHub.
+
+
 
 
 ### References
