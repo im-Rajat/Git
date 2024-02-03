@@ -84,14 +84,59 @@
     - `git commit --allow-empty-message --no-edit`
 
 #### Git Commit without Stage:
-  - `git commit -a`
-  - `git commit -a -m "Our commit message here"`
-  - This command automatically stages and commits all changes in tracked files in our working directory.
-  - This command only stages changes for files that are already being tracked by Git. It won't include changes in untracked files.
-  - The `-a` option stands for "all" and automatically stages any changes to tracked files before committing.
+
+- If you want to make a commit directly from your working directory (not using the staging environment), use this syntax:
+- `git commit -a`
+- `git commit -a -m "Our commit message here"`
+- This command automatically stages and commits all changes in tracked files in our working directory.
+- This command only stages changes for files that are already being tracked by Git. It won't include changes in untracked files.
+- The `-a` option stands for "all" and automatically stages any changes to tracked files before committing.
+
+### Git Branch
+
+- In Git, a `branch` is a new/separate version of the main repository.
+- With a new branch called new-design, edit the code directly without impacting the main branch.
+- Branches allow us to work on different parts of a project without impacting the main branch.
+- Create a new branch:
+    - `git branch new_branch` - Creates a new branch named "new_branch", but doesn't switch to it. We need to explicitly run `git checkout new_branch` to switch.
+    - `git checkout -b new_branch` - Creates a new branch named "new_branch"and immediately switches to it.
+- To list all branches in our repository:
+    - `git branch`
+    - The current branch is usually indicated with an asterisk (`*`).
+- To switch to an existing branch:
+    - `git checkout existing_branch` or
+    - `git switch existing_branch` - with more recent versions of Git
+- To delete a branch:
+    - `git branch -d branch_to_delete`
+    - `git branch -D branch_to_delete` - If the branch contains changes that haven't been merged, we may need to use `-D` to force the deletion:
+- To rename a branch:
+    - `git branch -m old_branch new_branch`
+- To see remote branches:
+    - `git branch -r`
+- To see both local and remote branches:
+    - `git branch -a`
+
+#### Git Branch Merge
+
+- Branch merging is a common operation in Git that involves combining changes from one branch into another.
+- First Switch to the target branch:
+    - Before we merge changes into a branch, we need to switch to the branch that will receive the changes (usually the main/master branch)
+    - `git checkout main` or `git switch main`
+- Merge the Source Branch:
+    - Once we are on the target branch, use the `git merge` command to merge changes from the source branch
+    - `git merge source_branch`
+- Resolve Conflicts (if any):
+    - Git will automatically merge most changes, but it may encounter conflicts if different branches modified the same file sections.
+    - We manually need to edit the conflicted files to resolve the differences.
+    - And Stage the resolved files with `git add.`
+- Push Changes (if necessary):
+    - After a successful merge, we may need to push the changes to the remote repository to make them available to others
+    - `git push origin main`
 
 
 ### References
 
 - https://learn.microsoft.com/en-us/training/modules/intro-to-git/
 - https://www.w3schools.com/git/
+- ChatGPT
+- 
