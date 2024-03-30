@@ -343,6 +343,10 @@
 - `git rebase -i HEAD-2` : to back 2 step, redirect to editor
 - `git rebase -i --root` : redirect to editor
 
+### Miscellaneous
+
+- Discard most recent commit:
+    - `git reset --hard HEAD~1` : It will remove the recent commit but also reset the files, assuming that sitting on the previous commit.
 
 
 # Github
@@ -377,7 +381,6 @@
     - It actually do anything with the information, we need to run git merge after running git fetch command.
 - Pull:
     - Git pull is a combination of doing a fetch, but also merging the data that is in our remote with our local version.
-
 
 ### References
 
