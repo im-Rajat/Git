@@ -330,6 +330,31 @@
         - `git merge upstream/<branch_name>` : Replace <branch_name> with the name of the branch that was added to the original repository. 
 - After following these steps, the new branch should now be available in our forked repository.
 
+### Transfer changes from Forked to Main Repository
+
+```
+# Clone the main repository
+git clone https://github.com/im-Rajat/Git
+cd Git
+
+# Add the forked repository as a remote
+git remote add forked https://github.com/im-Rajat-Forked/Git
+
+# Fetch the branch from the forked repository
+git fetch forked forked-update-git
+
+# Create and switch to a new branch in the main repository
+git checkout -b mainUpdateGit
+
+# Merge the changes from the forked branch into the new branch
+git merge forked/forked-update-git
+
+# Resolve any merge conflicts if they arise
+
+# Push the new branch to the main repository
+git push origin mainUpdateGit
+```
+
 ### Changing History
 
 - Amending use to modify changes without new commit, add change into last commit.
