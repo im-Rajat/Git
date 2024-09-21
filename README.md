@@ -318,6 +318,8 @@
 
 ### Update Forked Branch
 
+- List remote repositories:
+    - `git remove -v`
 - If a new branch has been added to the original repository, it will not automatically appear in our forked repository.
 - We will need to fetch the changes from the original repository and merge them into our forked repository.
 - To do this, we can follow these steps:
