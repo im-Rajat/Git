@@ -1,1 +1,9 @@
 theme: jekyll-theme-Midnight
+
+# Enable custom CSS override
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      css: "/assets/css/style.css"
