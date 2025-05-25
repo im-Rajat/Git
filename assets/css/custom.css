@@ -1,7 +1,6 @@
-/* Make the main container wider */
-.container, #main, .main-content {
-  max-width: 1000px !important;
-  width: 90% !important;
-  padding: 2rem !important;
+body .container, body #main, body .main-content {
+  max-width: 1200px !important;
+  width: 95% !important;
   margin: 0 auto !important;
+  padding: 2rem !important;
 }
