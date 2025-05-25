@@ -5,6 +5,39 @@
 - Git is used to collaborate on code.
 - Git help us to Manage projects with **Repositories**
 
+## Table of Contents
+
+- [Git](#git)
+- [Version Control System (VCS)](#version-control-system-vcs)
+- [What is GitHub?](#what-is-github)
+- [Configure Git](#configure-git)
+- [Set up Git Repository](#set-up-git-repository)
+- [Push Local Repository to GitHub](#push-local-repository-to-github)
+- [Git Staging Environment](#git-staging-environment)
+- [Git Commit](#git-commit)
+    - [Git Commit without Stage](#git-commit-without-stage)
+- [Git Branch](#git-branch)
+    - [Git Branch Merge](#git-branch-merge)
+- [Git Pull from GitHub](#git-pull-from-github)
+- [Git Push to GitHub](#git-push-to-github)
+- [Git Restore](#git-restore)
+- [Deleting Files](#deleting-files)
+- [Renaming File](#renaming-file)
+- [Diff & Patch](#diff--patch)
+- [Logging](#logging)
+- [Use .gitignore](#use-gitignore)
+- [Git Stash](#git-stash)
+- [Update Forked Branch](#update-forked-branch)
+- [Transfer Changes from Forked to Main Repository](#transfer-changes-from-forked-to-main-repository)
+- [Changing History](#changing-history)
+- [Miscellaneous](#miscellaneous)
+- [GitHub](#github)
+    - [Why GitHub?](#why-github)
+    - [Working with GitHub](#working-with-github)
+    - [Managing Projects with GitHub](#managing-projects-with-github)
+    - [Syncing GitHub](#syncing-github)
+- [References](#references)
+
 ### Version Control System (VCS)
 
 - Git allows multiple developers to work on a project simultaneously without interfering with each other.
