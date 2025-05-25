@@ -105,9 +105,8 @@
 
 - The staging environment allows you to selectively choose which changes in your working directory should be included in the next commit.
 - Files in our Git repository folder can be in one of 2 states:
-    - **Tracked:** files that Git knows about and are added to the repository
-    - **Untracked:** files that are in our working directory, but not added to the 
-    - repository
+    - **Tracked:** files that Git knows about and are added to the repository.
+    - **Untracked:** files that are in our working directory, but not added to the repository.
 - To stage changes to prepare for a commit:
     - `git add`
 - To check status of the working tree:
